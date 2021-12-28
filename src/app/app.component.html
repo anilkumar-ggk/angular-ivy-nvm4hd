@@ -1,20 +1,17 @@
-<hello name="{{ name }}"></hello>
-<p>Start editing to see some magic happen :)</p>
-<app-testing></app-testing>
 <form #dynamicForm="ngForm" (ngSubmit)="onFormSubmit()">
   <div *ngFor="let formField of formFields">
     <app-form-field [props]="formField" [formModel]="formData"></app-form-field>
   </div>
 
   <hr />
-  <p
+  <h3
     [ngClass]="{
       invalid: dynamicForm.form.invalid,
       valid: dynamicForm.form.valid
     }"
   >
     <b>Is form Valid? {{ dynamicForm.form.valid }}</b>
-  </p>
+  </h3>
   <button type="submit" [disabled]="!dynamicForm.form.valid">
     Submit Button
   </button>

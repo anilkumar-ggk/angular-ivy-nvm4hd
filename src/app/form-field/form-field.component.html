@@ -11,7 +11,9 @@
     [required]="props.isRequired"
     [disabled]="props.isDisabled"
   />
-  <p [ngClass]="{'invalid': field.invalid, 'valid': field.valid}">Is field valid? {{ field.valid }}</p>
+  <p [ngClass]="{ invalid: field.invalid, valid: field.valid }">
+    <b>Is field valid? {{ field.valid }}</b>
+  </p>
 </div>
 
 <!-- Other types of inputs here -->
