@@ -1,1 +1,16 @@
-<p>Incoming props: {{ props | json }}</p>
+<!-- <p>Incoming props: {{ props | json }}</p> -->
+<div *ngIf="props.type === 'text'">
+  <label [for]="props.id">{{ props.label }}</label> <br />
+  <input
+    [id]="props.id"
+    [type]="props.type"
+    [attr.name]="props.name"
+    [placeholder]="props.placeholder"
+    style="width: 90%"
+    [(ngModel)]="props['apiDataKey']"
+    [required]="props.isRequired"
+    [disabled]="props.isDisabled"
+    #fieldRef="ngModel"
+  />
+  <pre>Is field valid? {{ fieldRef.valid }}</pre>
+</div>
