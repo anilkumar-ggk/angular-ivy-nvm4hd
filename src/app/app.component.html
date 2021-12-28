@@ -6,12 +6,18 @@
     <app-form-field [props]="formField" [formModel]="formData"></app-form-field>
   </div>
 
+  <hr />
+  <p
+    [ngClass]="{
+      invalid: dynamicForm.form.invalid,
+      valid: dynamicForm.form.valid
+    }"
+  >
+    <b>Is form Valid? {{ dynamicForm.form.valid }}</b>
+  </p>
   <button type="submit" [disabled]="!dynamicForm.form.valid">
     Submit Button
   </button>
-
-  <hr />
-  <p>Is form Valid? {{ dynamicForm.form.valid }}</p>
   <hr />
   <div>
     <p><b>Values</b></p>

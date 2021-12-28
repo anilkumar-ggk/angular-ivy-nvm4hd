@@ -1,5 +1,4 @@
-<!-- <p>Incoming props: {{ props | json }}</p> -->
-<div *ngIf="props.type === 'text'">
+<div *ngIf="props.type === 'text'" class="fieldBox">
   <label [for]="props.id">{{ props.label }}</label> <br />
   <input
     #field="ngModel"
@@ -12,5 +11,7 @@
     [required]="props.isRequired"
     [disabled]="props.isDisabled"
   />
-  <pre>Is field valid? {{ field.valid }}</pre>
+  <p [ngClass]="{'invalid': field.invalid, 'valid': field.valid}">Is field valid? {{ field.valid }}</p>
 </div>
+
+<!-- Other types of inputs here -->

@@ -1,0 +1,13 @@
+.fieldBox {
+  margin: 5px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+
+.invalid {
+  color: red;
+}
+.valid {
+  color: green;
+}

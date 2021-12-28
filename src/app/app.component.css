@@ -1,3 +1,10 @@
 p {
   font-family: Lato;
 }
+
+.invalid {
+  color: red;
+}
+.valid {
+  color: green;
+}

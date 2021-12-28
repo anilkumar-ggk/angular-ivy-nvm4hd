@@ -9,14 +9,14 @@ export class AppComponent {
   name = 'Angular ' + VERSION.major;
   formData = {
     fName: '',
-    lName: '',
+    lName: 'Some default value',
   };
   formFields = [
     {
       name: 'firstName',
       id: 'firstName',
       type: 'text',
-      label: 'Enter your firstname here',
+      label: 'First Name',
       placeholder: 'Enter your firstname here',
       isRequired: true,
       isDisabled: false,
@@ -26,7 +26,7 @@ export class AppComponent {
       name: 'lastName',
       id: 'lastName',
       type: 'text',
-      label: 'Enter your lastname here',
+      label: 'Last Name',
       placeholder: 'Enter your lastname here',
       isRequired: true,
       isDisabled: false,
