@@ -3,9 +3,19 @@
 <app-testing></app-testing>
 <form #dynamicForm="ngForm" (ngSubmit)="onFormSubmit()">
   <div *ngFor="let formField of formFields">
-    <app-form-field [props]="formField" [formData]="formData"></app-form-field>
+    <app-form-field [props]="formField" [formModel]="formData"></app-form-field>
   </div>
+
   <button type="submit" [disabled]="!dynamicForm.form.valid">
     Submit Button
   </button>
+
+  <hr />
+  <p>Is form Valid? {{ dynamicForm.form.valid }}</p>
+  <hr />
+  <div>
+    <p><b>Values</b></p>
+    <pre>Dynamic form: {{ dynamicForm.value | json }}</pre>
+    <pre>Form Data: {{ formData | json }}</pre>
+  </div>
 </form>

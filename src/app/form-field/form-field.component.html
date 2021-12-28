@@ -2,15 +2,15 @@
 <div *ngIf="props.type === 'text'">
   <label [for]="props.id">{{ props.label }}</label> <br />
   <input
+    #field="ngModel"
     [id]="props.id"
     [type]="props.type"
     [attr.name]="props.name"
     [placeholder]="props.placeholder"
+    [(ngModel)]="formModel[props['apiDataKey']]"
     style="width: 90%"
-    [(ngModel)]="props['apiDataKey']"
     [required]="props.isRequired"
     [disabled]="props.isDisabled"
-    #fieldRef="ngModel"
   />
-  <pre>Is field valid? {{ fieldRef.valid }}</pre>
+  <pre>Is field valid? {{ field.valid }}</pre>
 </div>

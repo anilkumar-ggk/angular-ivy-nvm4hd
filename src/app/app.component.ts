@@ -7,7 +7,10 @@ import { Component, VERSION } from '@angular/core';
 })
 export class AppComponent {
   name = 'Angular ' + VERSION.major;
-  formData = {};
+  formData = {
+    fName: '',
+    lName: '',
+  };
   formFields = [
     {
       name: 'firstName',
@@ -26,7 +29,7 @@ export class AppComponent {
       label: 'Enter your lastname here',
       placeholder: 'Enter your lastname here',
       isRequired: true,
-      isDisabled: true,
+      isDisabled: false,
       apiDataKey: 'lName',
     },
   ];
