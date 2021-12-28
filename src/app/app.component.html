@@ -1,0 +1,7 @@
+<hello name="{{ name }}"></hello>
+<p>Start editing to see some magic happen :)</p>
+<form #dynamicForm="ngForm" (ngSubmit)="onFormSubmit()">
+  <div *ngFor="formField; in: formFields">
+    <app-form-field [props]="formField" [formData]="formData"></app-form-field>
+  </div>
+</form>
