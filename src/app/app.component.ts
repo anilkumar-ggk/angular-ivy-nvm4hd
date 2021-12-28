@@ -28,4 +28,9 @@ export class AppComponent {
       apiKey: 'fName',
     },
   ];
+
+  onFormSubmit() {
+    debugger;
+    alert('Form submitted');
+  }
 }
